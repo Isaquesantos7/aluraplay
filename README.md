@@ -7,4 +7,4 @@
 * HTML
 * CSS
 
-*Estudando cosumo de apis com javascript.
+*Estudando consumo de apis com javascript.

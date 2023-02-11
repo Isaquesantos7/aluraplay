@@ -1,4 +1,5 @@
 import { listVideosApi } from "./connection.js";
+
 const list = document.querySelector('[data-list]');
 
 function createElementList(title, description, url, imagem) {
@@ -9,7 +10,7 @@ function createElementList(title, description, url, imagem) {
         title="${title} frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-        <div class="descricao-video">
+        <div class="descricao-video" data-description>
             <img src="${imagem}" alt="logo canal alura">
             <h3>${title}</h3>
             <p>${description}</p>
