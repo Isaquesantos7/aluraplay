@@ -25,7 +25,15 @@ async function createVideo(title, description, url, image) {
     return transformedConnectApi;
 }
 
+async function searchVideo(titleSearch) {
+    const connectApi = await fetch(`http://localhost:3000/videos?q=${titleSearch}`);
+    const transformedConnectApi = await connectApi.json();
+
+    return transformedConnectApi;
+}
+
 export const listVideosApi = {
     connectionApiServer,
-    createVideo
+    createVideo,
+    searchVideo
 };

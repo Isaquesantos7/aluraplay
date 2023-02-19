@@ -1,14 +1,9 @@
-/* Aula 1 */
+/* HEADER 1 */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
-
-
-
 
 /* SEÇÃO VÍDEOS */
 
