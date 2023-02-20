@@ -1,10 +1,8 @@
-## Tecnologias utilizadas durante o curso
+## Tecnologias utilizadas no projeto
+* HTML
+* CSS3
 * Javascript
 * NodeJS
 * Json-server
 
-## Tecnologias utilizadas no projeto
-* HTML
-* CSS
-
-*Estudando consumo de apis com javascript.
+*Trainando consumo de apis com javascript.
