@@ -20,6 +20,10 @@ async function createVideo(title, description, url, image) {
 
     });
 
+    if(!connectApi.ok) {
+        throw new Error('Did not possible create this video!');
+    }
+    
     const transformedConnectApi = await connectApi.json();
 
     return transformedConnectApi;

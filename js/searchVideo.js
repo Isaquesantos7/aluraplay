@@ -14,7 +14,14 @@ async function searchVideo(e) {
         list.removeChild(list.firstChild)
     }
 
-    searchVideo.forEach(element => list.appendChild(createElementList(element.titulo, element.descricao, element.url, element.imagem)));
+    searchVideo.forEach(element => list.appendChild(createElementList(element.titulo, 
+        element.descricao, element.url, element.imagem))
+    );
+
+    
+    if (searchVideo.length == 0) {
+        list.innerHTML = `<h2 class="mensagem__titulo">No exist video with this term.</h2>`;
+    }
 }
 
 const btn = document.querySelector('[data-submit]');

@@ -22,9 +22,13 @@ export default function createElementList(title, description, url, imagem) {
 
 
 async function connectionApiServer() {
-    const connectApi = await listVideosApi.connectionApiServer();
+    try {
+        const connectApi = await listVideosApi.connectionApiServer();
 
-    connectApi.forEach(even => list.appendChild(createElementList(even.titulo, even.descricao, even.url, even.imagem)));
+        connectApi.forEach(even => list.appendChild(createElementList(even.titulo, even.descricao, even.url, even.imagem)));
+    } catch {
+        list.innerHTML = `<h2 class="mensagem__titulo">Não foi possível carregar os videos.</h2>`
+    }
 }
 
 connectionApiServer();

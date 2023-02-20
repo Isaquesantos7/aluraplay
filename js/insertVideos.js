@@ -11,11 +11,13 @@ async function createVideo(even) {
     const dataTitle = document.querySelector('[data-title]').value;                           
     const description = Math.floor(Math.random() * 10).toString();
 
-    console.log(dataUrl);
-    
-    await  listVideosApi.createVideo(dataTitle, description, dataUrl, dataImg);
+    try {
+        await  listVideosApi.createVideo(dataTitle, description, dataUrl, dataImg);
 
-    window.location.href = '../pages/envio-concluido.html' 
+        window.location.href = '../pages/envio-concluido.html' 
+    } catch (e) {
+        alert(e);
+    }
 }
 
 dataForm.addEventListener('submit', even => createVideo(even));
