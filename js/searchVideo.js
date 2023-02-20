@@ -9,6 +9,11 @@ async function searchVideo(e) {
 
     const list = document.querySelector('[data-list]');
 
+    /* removing the first child of list */
+    while(list.firstChild) {
+        list.removeChild(list.firstChild)
+    }
+
     searchVideo.forEach(element => list.appendChild(createElementList(element.titulo, element.descricao, element.url, element.imagem)));
 }
 
